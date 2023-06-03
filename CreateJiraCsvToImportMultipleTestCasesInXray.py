@@ -10,6 +10,7 @@ from openpyxl import load_workbook
 
 
 class CreateJiraCsvToImportMultipleTestCasesInXray:
+
     """
     This class converts the xlsx files (test cases from ALM) and saves them as csv file in the output folder.
     """
