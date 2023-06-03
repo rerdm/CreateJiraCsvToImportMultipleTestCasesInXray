@@ -9,7 +9,7 @@ import pandas as pd
 from openpyxl import load_workbook
 
 
-class CreateJiraCsvForToImportMultipleTestCasesInXray:
+class CreateJiraCsvToImportMultipleTestCasesInXray:
     """
     This class converts the xlsx files (test cases from ALM) and saves them as csv file in the output folder.
     """
@@ -282,7 +282,7 @@ if __name__ == '__main__':
     current_dir = os.getcwd()
     input_folder = os.path.join(current_dir, input_folder)
 
-    converter = CreateJiraCsvForToImportMultipleTestCasesInXray(input_folder, output_folder)
+    converter = CreateJiraCsvToImportMultipleTestCasesInXray(input_folder, output_folder)
     converter.convert()
 
     xlsx_files = os.listdir('input')

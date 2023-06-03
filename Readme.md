@@ -1,4 +1,4 @@
-# CreateJiraCsvForToImportMultipleTestCasesInXray
+# CreateJiraCsvToImportMultipleTestCasesInXray
 
 ### Purpose and explanation of teh program: 
 
