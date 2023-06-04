@@ -10,7 +10,6 @@ from openpyxl import load_workbook
 
 
 class CreateJiraCsvToImportMultipleTestCasesInXray:
-
     """
     This class converts the xlsx files (test cases from ALM) and saves them as csv file in the output folder.
     """
@@ -31,6 +30,7 @@ class CreateJiraCsvToImportMultipleTestCasesInXray:
 
         print("Converting xlsx files from [input folder] and save in [output folder] as csv - successfully ")
 
+
 class XlsxSetTestcaseNumber:
     """
     This class creates a new csv file --> combined.csv
@@ -48,22 +48,22 @@ class XlsxSetTestcaseNumber:
         for file_name in self.file_list:
             file_path = os.path.join('input', file_name)
 
-            # XLSX-Datei mit openpyxl öffnen
+            # Open XLSX-Datei with openpyxl
             wb = load_workbook(file_path)
             sheet = wb.active
 
-            # Nach Header-Spalte "Step Name" suchen
+            # Will look for the header with the content Step name
             header_col_index = None
             for col_idx, cell in enumerate(sheet[1]):
                 if cell.value == "Step Name":
-                    header_col_index = col_idx + 1  # Spaltenindex mit 1-basiertem Index
+                    header_col_index = col_idx + 1
 
             if header_col_index is not None:
-                # In der Spalte A ab der zweiten Zeile iterieren
+                # Iterate in column A starting from the second row
                 for row in sheet.iter_rows(min_row=2, min_col=header_col_index, max_col=header_col_index):
-                    cell_value = row[0].value  # Wert der Zelle in Spalte A
+                    cell_value = row[0].value  # Value of the cell of the column A
 
-                    # "1" in die Zelle schreiben und fortsetzen, bis eine leere Zelle erreicht wird
+                    # This will write the number if the testcase in the cell (Issue ID)
                     if cell_value is not None:
                         row[0].value = self.counter_for_files
 
@@ -72,7 +72,6 @@ class XlsxSetTestcaseNumber:
 
             self.counter_for_files = self.counter_for_files + 1
 
-            # XLSX-Datei speichern und schließen
             wb.save(file_path)
             wb.close()
 
@@ -148,10 +147,10 @@ class CSVReader:
                     i = i + 1
 
                 if row[0] == "Step Name":
-                    print(" - Column A 'Step name' found in row [{i}] of the CSV-File.")
+                    print(f' - Column A Step name found in row [{i}] of the CSV-File.')
                     self.lines_to_delete.append(i)
 
-        print("Found the header in fallowing lines :",self.lines_to_delete)
+        print("Found the header in fallowing lines :", self.lines_to_delete)
         return self.lines_to_delete
 
 
@@ -177,7 +176,7 @@ class SubtractListElements:
             subtracted_value = self.value_list[i] - i
             result_list.append(subtracted_value)
 
-        print("Manipulated List with the proper header numbers to delete : ", result_list )
+        print("Manipulated List with the proper header numbers to delete : ", result_list)
         return result_list
 
 
@@ -213,7 +212,9 @@ class CSVDeleteLines:
                      "Close the file and run the programm again.\n"
                      "NOTE: The file will be overwritten - to prevent overriding store the file in a other location.\n"
                      )
-        print("Headlines deleted to have only one headline in teh file multiple_testcases_file_for_jira.csv")
+        print("Headlines deleted to have only one headline in the file multiple_testcases_file_for_jira.csv")
+
+
 class ChangeCsvCodingFromAsiToUTF8:
     """
     In this class the csv file is passed, which was adapted for JIRa.
@@ -313,7 +314,6 @@ if __name__ == '__main__':
 
     subtracter = SubtractListElements(list_of_lines_to_delete)
     result = subtracter.subtract_elements()
-
 
     time.sleep(2)
 
