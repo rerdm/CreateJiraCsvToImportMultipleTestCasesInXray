@@ -11,3 +11,15 @@
 
 ![Program Structure](./img/Program_structur.PNG)
 
+###  PROGRAM USAGE (EXECUTABLE)
+1. You have to download the executable from executable folder
+2. You have to create these folders before running  the program (Need to be placed in the same location as the executable) <br>
+   <b>input</b> -  (contains the test-cases in xlsx format)</b><br>
+   <b>output</b> - (empty folder - here the testcases will be stored in csv files)</b><br>
+   <b>jira_import </b>- (empty folder - here the combined.csv and the multiple_testcases_file_for_jira will be saved as csv files)</b><br>
+<br>The **_combined.csv_** contains all test-cases attached
+   The **_multiple_testcases_file_for_jira.csv_** contains all testcases with the correct header and with the correct format for a valid XRAY import.<br>
+<br>
+3. Open the CMD in the current dir and run the program (otherwise you will not see the loging and the program closes immediately after execution)
+ 
+
