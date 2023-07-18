@@ -9,7 +9,8 @@
   - These 5 columns are required otherwise the csv will be rejected from XRAY.<br>
 
 
-![Program Structure](./img/Program_structur.PNG)
+![Program Structure](./img/Program_structur_v2.PNG)
+
 
 ###  PROGRAM USAGE (EXECUTABLE)
 1. You have to download the executable from executable folder.
