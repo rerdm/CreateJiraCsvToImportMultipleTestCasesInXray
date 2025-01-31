@@ -10,7 +10,7 @@ UPDATE : 2023.10.01 New version of CreateJiraCsvToImportMultipleTestCasesInXray.
   - These 5 columns are required otherwise the csv will be rejected from XRAY.<br>
 
 
-![Program Structure](./img/Program_structur_v3.png)
+![Program Structure](./img/Program_structur_v2.png)
 
 
 ###  PROGRAM USAGE (EXECUTABLE)
