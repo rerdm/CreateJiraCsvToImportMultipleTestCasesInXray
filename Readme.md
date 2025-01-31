@@ -13,6 +13,7 @@ UPDATE : 2023.10.01 New version of CreateJiraCsvToImportMultipleTestCasesInXray.
 ![Program Structure](./img/Program_structur_v2.png)
 
 
+
 ###  PROGRAM USAGE (EXECUTABLE)
 1. You have to download the executable from executable folder.
 2. You have to create these folders before running  the program (Need to be placed in the same location as the executable). <br>
