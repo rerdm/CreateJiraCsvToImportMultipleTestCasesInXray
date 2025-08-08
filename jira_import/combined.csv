@@ -1,8 +1,0 @@
-Step Name;Summary;Test Type;Description;Expected Result
-1;001-Test-Case-1.xlsx;Manual;Description Test Step 1 ;Expected result of test step 1
-1;;;Description Test Step 1 ;Expected result of test step 2 
-1;;;Description Test Step 1 ;Expected result of test step 3
-Step Name;Summary;Test Type;Description;Expected Result
-2;001-Test-Case-2.xlsx;Manual;Description Test Step 1 ;Expected result of test step 1
-2;;;Description Test Step 1 ;Expected result of test step 2 
-2;;;Description Test Step 1 ;Expected result of test step 3

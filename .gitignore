@@ -1,0 +1,22 @@
+/input_do_not_upload/
+/jira_import_do_not_upload/
+/output_do_not_upload/
+/src/
+/img/CreateJiraCsvToImportMultipleTestCasesInXray.ico
+
+
+# pptx
+img/*.pptx
+
+# archive folders
+input/archive/
+output/archive/
+jira_import/archive/
+archive/
+.idea/
+
+# Other files
+TestCase_liste/
+temp.csv
+CreateJiraCsvToImportMultipleTestCasesInXray.iml
+Convert_xlsx_to_csv.iml
