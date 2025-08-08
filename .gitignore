@@ -9,11 +9,9 @@
 img/*.pptx
 
 # archive folders
-input/archive/
-output/archive/
-jira_import/archive/
 archive/
 .idea/
+venv
 
 # Other files
 TestCase_liste/
